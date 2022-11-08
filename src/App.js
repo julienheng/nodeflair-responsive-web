@@ -4,7 +4,7 @@ import agoda from "./images/agoda.png";
 import apple from "./images/apple.png";
 import chase from "./images/chase.png";
 import google from "./images/google.png";
-import microsoft from "./images/microsoft.png";
+import uber from "./images/uber.png";
 import shopee from "./images/shopee.png";
 import sia from "./images/sia.png";
 
@@ -29,8 +29,8 @@ function App() {
       techStack: ["Node.js", "React.js", "DBMongo"],
     },
     {
-      logo: microsoft,
-      company: "Microsoft",
+      logo: uber,
+      company: "Uber",
       position: "Full-Stack Developer",
       salary: "10,000 - 12,000 / Monthly",
       datePost: "6 days ago",
@@ -108,13 +108,13 @@ function App() {
                 <p className="font-black mt-1.5 text-lg">{card.position}</p>
                 <div className="text-sm font-light mt-1.5">{card.salary === "" ? <div className="text-sm mt-6"></div> : card.salary}</div>
                 <div className="text-sm flex flex-row justify-between">
-                  <div className="mt-2 italic font-light">{card.datePost === "1 day ago" ? <div className="font-bold text-[#1ec769]">{card.datePost}</div> : card.datePost}</div>
+                  <div className="mt-2 italic font-normal text-[#606467]">{card.datePost === "1 day ago" ? <div className="font-bold text-[#1ec769]">{card.datePost}</div> : card.datePost}</div>
                   <div className="type">{card.type}</div>
                 </div>
-                <hr className="m-2"></hr>
+                <hr className="mt-2 mb-2 w-full"></hr>
                 <div className="text-sm flex flex-row justify-start">
                   {Object.values(card.techStack).map((stack, i) => (
-                    <div key={i} className={`mr-3 ${i === 0 ? "green" : "gray"}`}>
+                    <div key={i} className="mr-1 mt-2 gray">
                       {stack}
                     </div>
                   ))}

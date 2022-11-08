@@ -27,6 +27,7 @@ section {
   max-width: 1300px;
   width: 100%;
   margin: auto;
+  padding: 40px;
 }
 
 h1 {
@@ -44,13 +45,13 @@ h1 {
 }
 
 .card {
-  flex: 0, 0 calc(33.33% - 20px);
-  max-width: calc(33.33% - 20px);
+  flex: 0, 0 calc(30% - 0px);
+  max-width: calc(30% - 0px);
   width: 100%;
   background: white;
   border-radius: 10px;
   padding: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   transition: 0.3s;
   border: 2px solid transparent;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -74,8 +75,7 @@ img {
 }
 
 .type,
-.ts,
-.green {
+.ts {
   border: 1px solid white;
   width: fit-content;
   padding: 5px;
