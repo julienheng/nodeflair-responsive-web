@@ -57,12 +57,12 @@ h1 {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-@keyframes bounce {
+/* @keyframes bounce {
   10% {
     transform: translateY(10px);
     transform: translateY(-5px);
   }
-}
+} */
 
 .card:hover {
   transform: translateY(-10px);
@@ -102,7 +102,7 @@ img {
     padding: 20px 15px;
   }
   h1 {
-    font-size: 30px;
+    font-size: 50px;
     line-height: 40px;
   }
   .card {

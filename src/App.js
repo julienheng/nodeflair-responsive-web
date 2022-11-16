@@ -94,40 +94,34 @@ function App() {
   ]);
 
   return (
-    <div>
-      <section>
-        <div className="container ">
-          <h1 className="text-[#1EC769]">
-            NodeFlair.<span className="text-[#FFE03B]">Jobs</span>
-          </h1>
-          <div className="cards">
-            {cards.map((card, i) => (
-              <div key={i} className="card">
-                <img src={card.logo} alt="" />
-                <h3 className="mt-5 text-sm">{card.company}</h3>
-                <p className="font-black mt-1.5 text-lg">{card.position}</p>
-                <div className="text-sm font-light mt-1.5">{card.salary === "" ? <div className="text-sm mt-6"></div> : card.salary}</div>
-                <div className="text-sm flex flex-row justify-between">
-                  <div className="mt-2 italic font-normal text-[#606467]">{card.datePost === "1 day ago" ? <div className="font-bold text-[#1ec769]">{card.datePost}</div> : card.datePost}</div>
-                  <div className="type">{card.type}</div>
-                </div>
-                <hr className="mt-2 mb-2 w-full"></hr>
-                <div className="text-sm flex flex-row justify-start">
-                  {Object.values(card.techStack).map((stack, i) => (
-                    <div key={i} className="mr-1 mt-2 gray">
-                      {stack}
-                    </div>
-                  ))}
-                </div>
+    <section>
+      <div className="container ">
+        <h1 className="text-[#1EC769]">
+          NodeFlair.<span className="text-[#FFE03B]">Jobs</span>
+        </h1>
+        <div className="cards">
+          {cards.map((card) => (
+            <div className="card">
+              <img src={card.logo} alt="" />
+              <h3 className="mt-5 text-sm">{card.company}</h3>
+              <p className="font-black mt-1.5 text-lg">{card.position}</p>
+              <div className="text-sm font-light mt-1.5">{card.salary === "" ? <div className="mt-6"></div> : card.salary}</div>
+              <div className="text-sm flex flex-row justify-between">
+                <div className="mt-2 italic font-normal text-[#606467]">{card.datePost === "1 day ago" ? <div className="font-bold text-[#1ec769]">{card.datePost}</div> : card.datePost}</div>
+                <div className="type">{card.type}</div>
               </div>
-            ))}
-          </div>
+              <hr className="mt-2 mb-2 w-full"></hr>
+              <div className="text-sm flex flex-row justify-start">
+                {Object.values(card.techStack).map((stack) => (
+                  <div className="mr-1 mt-2 gray">{stack}</div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
 
 export default App;
-
-// className={`card ${i === 1 ? "green" : "grey"}`}
